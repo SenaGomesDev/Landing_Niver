@@ -1,0 +1,90 @@
+@use 'variaveis';
+
+.room {
+    min-height: 50vw;
+    width: 100%;
+    padding-bottom: 5.6vw;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__content {
+        &__list {
+            display: none;
+            gap: 24px;
+            margin-top: 44px;
+
+            &--is-active {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            &__item {
+                img {
+                    height: 328px;
+                    width: 432px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                    width: 100%; /* Faz com que as imagens ocupem 100% da largura do contêiner */
+                    object-fit: cover; /* Faz com que as imagens se adaptem ao contêiner sem distorção */
+                    border-radius: 8px; /* Adiciona bordas arredondadas para melhorar o design, opcional */
+                }
+            }
+        }
+
+        &__tabs {
+            display: flex;
+            justify-content: center;
+
+            &__button {
+                color: variaveis.$lightTextColor;
+                font-size: 20px;
+                border: none;
+                padding: 5px;
+                background: none;
+                text-transform: uppercase;
+                margin: 0 1vw;
+                cursor: pointer;
+                border-bottom: 5px solid transparent;
+
+                &--is-active {
+                    transition: ease .5s;
+                    border-bottom: 5px solid variaveis.$lightTextColor;
+                }
+            }
+        }
+    }
+}
+
+
+/* Responsividade para tamanhos de 500px a 768px */
+@media (min-width: 500px) and (max-width: 768px) {
+    .room__content__list--is-active {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* 1 coluna em telas menores */
+        gap: 16px;
+    }
+}
+
+/* Responsividade para tamanhos de 768px a 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .room__content__list--is-active {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas */
+        gap: 20px;
+    }
+}
+
+/* Responsividade para tamanhos de 1024px em diante */
+@media (min-width: 1024px) {
+    .room__content__list--is-active {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colunas */
+        gap: 24px;
+    }
+}

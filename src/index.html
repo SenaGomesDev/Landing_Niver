@@ -4,11 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NiverMatheus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles/main.scss">
 </head>
 <body>
-    <h1>Olá</h1>
-    <img src="images/Piscina.jpg" alt="Piscina">
-    <script src="scripts/main.js"></script>
+    <header class="hero">
+        <div data-aos="fade-down" class="hero__content container">
+            <div class="hero__content__title">
+                <h1 class="title--big">
+                    Aniversário do Matheus
+                </h1>
+            </div>
+            <div class="hero__content__subtitle">
+                <h2 class="title--small"></h2>
+            </div>
+            <div class="hero__content__infos">
+                <ul class="hero__content__infos__info">
+                    <li class="text--big">Localização</li>
+                    <li class="text--medium">Sr. do Bonfim / BA</li>
+                    </ul>
+                    <ul class="hero__content__infos__info">
+                        <li class="text--big">Participantes</li>
+                    <li class="text--medium">15 pessoas</li>
+                    </ul>
+                <ul class="hero__content__infos__info">
+                    <li class="text--big">Idade</li>
+                    <li class="text--medium">+18 anos</li>
+                </ul>
+                <button class="button">Participar</button>
+            </div>
+        </div>
+    </header>
+    <section data-aos="fade-down" class="room">
+        <div class="room__content container">
+            <h2 class="title--medium">Espaço</h2>
+            <ul data-tab-id="exterior" class="room__content__list room__content__list--is-active">
+                <li class="room__content__list__item">
+                    <img src="/src/images/Caminho.webp" alt="Exterior">
+                </li>
+                <li class="room__content__list__item">
+                    <img src="/src/images/Churras.webp" alt="Exterior">
+                </li>
+                <li class="room__content__list__item">
+                    <img src="/src/images/MesaCadeira.webp" alt="Exterior">
+                </li>
+                <li class="room__content__list__item">
+                    <img src="/src/images/Parquinho.webp" alt="Exterior">
+                </li>
+                <li class="room__content__list__item">
+                    <img src="/src/images/Piscina.jpg" alt="Exterior">
+                </li>
+                <li class="room__content__list__item">
+                    <img src="/src/images/Parquinho2.jpg" alt="Exterior">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section data-aos="fade-right" class="image-text-section container">
+        <img src="./images/Bolo.png" alt="Salgadinhos de festa">
+        <div class="image-text-section__text_container">
+            <h2 class="title--medium">"Para todos os sentidos"</h2>
+            <p class="text--big">Prepare-se para uma noite inesquecível! Nossa festa de aniversário promete uma experiência completa, com um cardápio irresistível que vai te fazer viajar por diversos sabores. E para acompanhar, uma seleção de bebidas para todos os gostos, com a liberdade de trazer a sua preferida e compartilhar com os amigos. Música boa, gente querida e muita diversão garantidas!</p>
+        </div>
+    </section>
+    <section data-aos="fade-left" class="image-text-section image-text-section--image-right container">
+        <img src="./images/Drinks.png" alt="Salgadinhos de festa">
+        <div class="image-text-section__text_container">
+            <h2 class="title--medium">"Vem comemorar comigo"</h2>
+            <p class="text--big">Tá afim de comer até rolar pelo chão e beber até não aguentar mais? Então vem pra minha festa de aniversário! Teremos um buffet de dar água na boca e um open bar pra lá de especial. A única regra? Traga sua bebida favorita e vamos celebrar juntos!</p>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
+<footer>
+    <div class="footer text--big">
+        <p>© Matheus Sena Gomes - Todos os direitos reservados - 2024</p>
+    </div>
+</footer>
 </html>
